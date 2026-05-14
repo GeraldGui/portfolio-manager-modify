@@ -12,6 +12,17 @@ public class FinanceApplication {
 
         // try to deposit money into both accounts
         account1.deposit(100);
-        //account2.deposit(100);
+        ((BankAccount) account2).deposit(200);
+
+        Portfolio portfolio = new Portfolio("Potato", "Steer");
+
+        portfolio.add(account1);
+        portfolio.add(account2);
+
+        System.out.println(portfolio.getMostValuable());
+        System.out.println(portfolio.getLeastValuable());
+
+
+
     }
 }
